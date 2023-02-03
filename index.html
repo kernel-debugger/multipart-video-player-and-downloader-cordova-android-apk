@@ -1,0 +1,60 @@
+<meta name="viewport" content="width=device-width">
+<video controls></video>
+<form>
+	<input type="text" name="url" id="url" placeholder="URL" required value="">
+	<div class="flx-h-ctr">
+		<input type="number" id="segs"  placeholder="SEGMENTS" >
+		<input step=".1" type="number" id="size"  placeholder="SEGMENT SIZE" >
+	</div>
+	<div class="flx-h-ctr">
+	<input type="checkbox" id="preview"><label for="preview">Preview Video</label>
+	</div>
+	<div class="flx-h-ctr">
+	<input type="checkbox" id="bsp"><label for="preview">Block Size Preview</label>
+	</div>
+	<button type="button" id="start">Start Download</button>
+</form>
+<div> Size: <span id="dwsize">0 MB</span>/<span id="fsize">0 MB</span></div>
+<div> Progress: <span id="prog">0%</span></div>
+
+<script type="text/javascript" src="cordova.js"></script>
+
+<script type="text/javascript" src="FileDownloader.js"></script>
+
+<script type="text/javascript" src="app.js"></script>
+
+<style type="text/css">
+	body{
+		font-family: system-ui;
+	}
+	video{
+		max-width: 100%;
+	}
+	form{
+		max-width: 400px;
+	}
+	input{
+		margin: 5px;
+	}
+	input:not([type=checkbox]){
+		width: 100%;
+		padding-left: 15px;
+		height: 40px;
+	}
+	input[type=checkbox]{
+		width: 30px;
+		margin-right: 10px;
+		height: 30px;
+	}
+	label{
+		font-size: 18px;
+	}
+	button{
+		width: 100%;
+		padding: 15px;
+	}
+	.flx-h-ctr{
+		display: flex;
+		align-items: center;
+	}
+</style>
